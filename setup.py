@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""Scientific Python libraries documentation"""
+
+from distutils.core import setup
+import os
+import os.path as osp
+
+def get_data_files(dirname):
+    """Return data files in directory *dirname*"""
+    flist = []
+    for dirpath, _dirnames, filenames in os.walk(dirname):
+        for fname in filenames:
+            flist.append(osp.join(dirpath, fname))
+    return flist
+
+setup(name='Scidoc', version='1.6.2',
+      description='Scidoc installs scientific libraries documentation',
+      long_description="""Scidoc installs scientific libraries documentation 
+(NumPy, SciPy, Matplotlib and others) in sys.prefix\Doc directory. 
+Scidoc version is indexed to NumPy version.""",
+      data_files=[(r'Doc', get_data_files('doc'))],
+      author = "Pierre Raybaut",
+      author_email = 'pierre.raybaut@gmail.com',
+      url = 'http://code.google.com/p/winpython/',
+      classifiers=['Operating System :: Microsoft :: Windows'])
