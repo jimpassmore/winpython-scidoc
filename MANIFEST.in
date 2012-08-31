@@ -1,2 +1,2 @@
-recursive-include qch *.qch
+recursive-include doc *.chm *.pdf
 include MANIFEST.in
