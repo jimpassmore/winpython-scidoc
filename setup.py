@@ -13,10 +13,10 @@ def get_data_files(dirname):
             flist.append(osp.join(dirpath, fname))
     return flist
 
-setup(name='Scidoc', version='1.6.2',
+setup(name='Scidoc', version='1.6.2.0',
       description='Scidoc installs scientific libraries documentation',
       long_description="""Scidoc installs scientific libraries documentation 
-(NumPy, SciPy, Matplotlib and others) in sys.prefix\Doc directory. 
+(NumPy, SciPy, Matplotlib and others) in sys.prefix\Doc directory on Windows. 
 Scidoc version is indexed to NumPy version.""",
       data_files=[(r'Doc', get_data_files('doc'))],
       author = "Pierre Raybaut",
